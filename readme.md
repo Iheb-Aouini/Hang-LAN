@@ -55,6 +55,7 @@ Here's a quick overview of how our project is organized:
 
 - For the console interface, just follow the prompts to play Hangman. We've added some extra features like sound effects, timers, and scores to spice things up.
 - If you're up for a challenge, fire up the multiplayer Hangman game server and connect with your friends for some competitive fun!
+- Note that running the multiplayer code on the public internet might be insecure since security implementations were not the primary focus, but rather on learning and exploration.
 - And don't forget to check out our graphical user interfaces:
   - Run the desktop GUI using Tkinter by running the appropriate script.
   - Start the web GUI using Flask by firing up the Flask server.
