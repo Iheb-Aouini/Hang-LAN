@@ -1,4 +1,4 @@
-# Hangman Game with Binary Search Tree
+# Hangman Game MULTIPLAYER with Binary Search Tree
 
 Welcome to our Hangman game project! We've created a fun Hangman game using a Binary Search Tree (BST) to store the words you'll be playing with. Not only do we have a classic console interface with some cool features like sounds, timers, and scores, but we've also built a multiplayer Hangman game server using multithreading. Plus, we've got graphical user interfaces (GUI) for both desktop and web!
 
@@ -16,10 +16,14 @@ To get started, make sure you have the following installed:
   - `flask_login`
   - `flask_migrate`
 
+Tested on fedora + ubuntu 
 You can install these dependencies on Fedora using:
 
 sudo dnf install make gcc pulseaudio-utils python3
+
 sudo python3 -m pip install flask flask_sqlalchemy flask_login flask_migrate
+
+sudo pip3 install tkinter
 
 ## Compilation and Execution
 
@@ -43,9 +47,9 @@ make clean
 
 Here's a quick overview of how our project is organized:
 
-- `src/`: This is where all the C source code lives.
-- `gui/`: Here's where you'll find the Tkinter and Flask GUI code.
-- `data/`: We store any necessary data files here.
+- `console_hangman/`: This is where all the console hangman game : C source code lives here + ressources and executables.
+- `desktop_hangman/`: Here's where you'll find the Tkinter GUI code.
+- `web_hangman/`: Here's where you'll find the Flask python code with the database.
 
 ## Usage
 
@@ -57,13 +61,10 @@ Here's a quick overview of how our project is organized:
 
 ## Contributing
 
-We'd love your contributions! If you've got ideas or want to help out, here's how you can get involved:
+We'd love your contributions! If you've got ideas or want to help out
 
-1. Fork the repository
-2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your changes (`git commit -am 'Add some AmazingFeature'`)
-4. Push to the branch (`git push origin feature/AmazingFeature`)
-5. Open a pull request
+## linkedin 
+https://www.linkedin.com/in/iheb-aouini-47682a200/
 
 ## License
 
