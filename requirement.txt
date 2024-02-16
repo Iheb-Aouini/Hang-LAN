@@ -1,0 +1,8 @@
+sudo dnf install make
+sudo dnf install gcc
+sudo dnf install pulseaudio-utils
+sudo dnf install python3
+sudo python3 -m pip install flask
+sudo python3 -m pip install flask_sqlalchemy
+sudo python3 -m pip install flask_login
+sudo python3 -m pip install flask_migrate

@@ -1,0 +1,118 @@
+/* Styles for index.html, game.html, and diff.html */
+
+/* Updated Styles for index.html, game.html, and diff.html */
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    max-width: 600px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    text-align: center; /* Center the content inside the container */
+}
+
+.heading {
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 28px;
+}
+
+.subheading {
+    color: #666;
+    text-align: center;
+    font-size: 18px;
+}
+
+.difficulty-form {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.label {
+    margin-right: 10px;
+    font-size: 18px;
+}
+
+.start-button {
+    padding: 12px 24px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-size: 16px;
+}
+
+.start-button:hover {
+    background-color: #0056b3;
+}
+
+.game-form {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.guess-button {
+    padding: 12px 24px;
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-size: 16px;
+}
+
+.guess-button:hover {
+    background-color: #218838;
+}
+
+.guessed-word {
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+
+.letter {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    background-color: #eee;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-right: 10px;
+    text-align: center;
+    line-height: 30px;
+    font-size: 18px;
+}
+
+.attempts-left {
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+
+.message {
+    font-size: 18px;
+    color: #dc3545;
+    margin-top: 20px;
+}
+
+.footer {
+    text-align: center;
+    margin-top: 30px;
+    color: #666;
+    font-size: 14px;
+}
+

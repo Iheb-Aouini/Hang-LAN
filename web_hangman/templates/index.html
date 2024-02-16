@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hangman Game</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+             background-color: #f0f8ff; /* Calm background color */
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            width: 500px; /* Increased width for better visibility */
+            padding: 40px;
+            background-color: #fff; /* White background for the container */
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        h1 {
+            color: #333;
+            margin-bottom: 30px;
+            font-size: 28px; /* Increased font size for better visibility */
+        }
+        form {
+            margin-top: 30px;
+        }
+        label {
+            font-weight: bold;
+            margin-right: 15px;
+            font-size: 18px; /* Increased font size for better visibility */
+        }
+        select, button {
+            padding: 12px 24px; /* Increased padding for better clickability */
+            font-size: 18px; /* Increased font size for better visibility */
+            border: none;
+            border-radius: 6px;
+            margin-right: 15px;
+            cursor: pointer;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        select {
+            background-color: #e5f3d6; /* Light green background color for select */
+        }
+        button {
+            font-size: 18px; /* Increased font size for better visibility */
+            border-radius: 6px;
+            transition: background-color 0.3s, color 0.3s;
+            background-color: #4caf50; /* Green color for the "Play" button */
+            color: white;
+        }
+        button:hover {
+            background-color: #45a049; /* Darker green color on hover */
+        }
+        .btn-primary {
+            margin-top: 30px;
+            display: inline-block;
+            text-decoration: none;
+            color: #fff;
+            border-radius: 6px;
+            transition: background-color 0.3s;
+            padding: 14px 28px; /* Increased padding for better clickability */
+            font-size: 18px; /* Increased font size for better visibility */
+        }
+        .btn-primary:hover {
+            background-color: #007f00; /* Calm green color for View History button on hover */
+        }
+        .btn-history {
+            background-color: #6c757d; /* Gray color for the "View History" button */
+        }
+        .btn-history:hover {
+            background-color: #495057; /* Darker gray color on hover */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to Hangman Game!</h1>
+        <form action="{{ url_for('difficulty_selection') }}" method="post">
+            <label for="difficulty">Select Difficulty:</label>
+            <select name="difficulty" id="difficulty">
+                <option value="1">Easy</option>
+                <option value="2">Medium</option>
+                <option value="3">Hard</option>
+            </select>
+            <button type="submit">Play</button>
+        </form>
+        <a href="{{ url_for('history') }}" class="btn-primary btn-history">View History</a>
+        <form action="{{ url_for('logout') }}" method="post">
+            <button type="submit" class="btn-primary" style="background-color: #ff6666;">Logout</button>
+        </form>
+    </div>
+</body>
+</html>
+

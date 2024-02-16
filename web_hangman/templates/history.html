@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game History</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f8ff; /* Calm background color */
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        table {
+            margin: 20px auto;
+            border-collapse: collapse;
+            width: 95%; /* Increased table width */
+            max-width: 1000px; /* Maximum width to prevent stretching */
+            background-color: #ffffff; /* White background color */
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        th, td {
+            padding: 20px; /* Increased padding */
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #2ecc71; /* Vibrant green color for header */
+            color: white;
+            text-transform: uppercase;
+        }
+
+        tr:nth-child(even) {
+            background-color: #ffffff; /* White background for even rows */
+        }
+
+        tr:nth-child(odd) {
+            background-color: #f2f2f2; /* Light gray background for odd rows */
+        }
+
+        tr:hover {
+            background-color: #d5f5e3; /* Lighter hover color */
+        }
+
+        .btn {
+            display: block;
+            width: 200px;
+            margin: 20px auto;
+            padding: 15px;
+            text-align: center;
+            background-color: #2ecc71; /* Vibrant green color for button */
+            color: #fff;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: background-color 0.3s ease;
+            font-size: 18px;
+        }
+
+        .btn:hover {
+            background-color: #27ae60; /* Darker green color on hover */
+        }
+    </style>
+</head>
+<body>
+    <h1>Game History</h1>
+    <table>
+        <tr>
+            <th>Date</th>
+            <th>Guessed Word</th>
+            <th>Difficulty</th>
+            <th>Score</th>
+        </tr>
+        {% for game in games %}
+        <tr>
+            <td>{{ game.date }}</td>
+            <td>{{ game.guessed_word }}</td>
+            <td>{{ game.difficulty }}</td>
+            <td>{{ game.score }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    <a href="{{ url_for('index') }}" class="btn">Go back to main page</a>
+</body>
+</html>
+

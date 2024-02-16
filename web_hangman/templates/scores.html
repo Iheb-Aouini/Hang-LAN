@@ -1,0 +1,31 @@
+<!-- scores.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Scores</title>
+</head>
+<body>
+    <h1>User Scores</h1>
+    <h2>Best Scores:</h2>
+    <p>Easy: {% if best_scores['Easy'] %} {{ best_scores['Easy'].score }} {% else %} N/A {% endif %}</p>
+    <p>Medium: {% if best_scores['Medium'] %} {{ best_scores['Medium'].score }} {% else %} N/A {% endif %}</p>
+    <p>Hard: {% if best_scores['Hard'] %} {{ best_scores['Hard'].score }} {% else %} N/A {% endif %}</p>
+    <h2>Word Lengths:</h2>
+    <p>Easy: {{ word_lengths['Easy'] }}</p>
+    <p>Medium: {{ word_lengths['Medium'] }}</p>
+    <p>Hard: {{ word_lengths['Hard'] }}</p>
+    <h2>Attempts Allowed:</h2>
+    <p>Easy: {{ attempts['Easy'] }}</p>
+    <p>Medium: {{ attempts['Medium'] }}</p>
+    <p>Hard: {{ attempts['Hard'] }}</p>
+    <h2>Attempts Used:</h2>
+    <p>Easy: {% if attempts_used['Easy'] %} {{ attempts_used['Easy'] }} {% else %} N/A {% endif %}</p>
+    <p>Medium: {% if attempts_used['Medium'] %} {{ attempts_used['Medium'] }} {% else %} N/A {% endif %}</p>
+    <p>Hard: {% if attempts_used['Hard'] %} {{ attempts_used['Hard'] }} {% else %} N/A {% endif %}</p>
+    <a href="{{ url_for('index') }}" class="btn btn-primary">Go back to main page</a>
+</body>
+</html>
+
